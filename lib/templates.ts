@@ -1,0 +1,163 @@
+export interface LetterTemplate {
+  id: string;
+  level: 'B1' | 'B2' | 'C1';
+  titleTr: string;
+  titleDe: string;
+  thema: string;
+  de: string[];
+  tr: string[];
+  kalipNotu: string;
+}
+
+export const TEMPLATES: LetterTemplate[] = [
+  {
+    id: 't1',
+    level: 'B1',
+    titleTr: 'Arkadaşa Doğum Günü Daveti',
+    titleDe: 'Einladung zum Geburtstag',
+    thema: 'Kişisel mektup · Einladung',
+    de: [
+      'Liebe Anna,',
+      'Wie geht es dir? Mir geht es gut. Ich habe mich sehr über deine letzte Nachricht gefreut.',
+      'Ich schreibe dir, weil ich dich herzlich zu meinem Geburtstag einladen möchte.',
+      'Die Party findet am Samstag um 19 Uhr bei mir statt. Mein Vorschlag ist, dass wir zusammen essen und Musik hören.',
+      'Kannst du mir bitte bis Donnerstag Bescheid sagen, ob du kommen kannst?',
+      'Ich freue mich auf deine Antwort.',
+      'Liebe Grüße,\nElif',
+    ],
+    tr: [
+      'Sevgili Anna,',
+      'Nasılsın? Ben iyiyim. Son mesajına çok sevindim.',
+      'Sana doğum günüme içtenlikle davet etmek için yazıyorum.',
+      'Parti cumartesi saat 19.00’de bende olacak. Önerim birlikte yemek yiyip müzik dinlememiz.',
+      'Perşembeye kadar gelip gelemeyeceğini bana bildirir misin lütfen?',
+      'Cevabını dört gözle bekliyorum.',
+      'Sevgiler,\nElif',
+    ],
+    kalipNotu: 'B1 kişisel mektup formülü: Hitap → Hatır sorma → Neden (weil) → Detay (wann/wo) → Rica → Kapanış. 4-5 bağlaç (weil, dass, und, aber, oder) kullanmayı unutma.',
+  },
+  {
+    id: 't2',
+    level: 'B1',
+    titleTr: 'Otele Şikayet Mektubu',
+    titleDe: 'Beschwerde an das Hotel',
+    thema: 'Resmi mektup · Beschwerde',
+    de: [
+      'Sehr geehrte Damen und Herren,',
+      'Vielen Dank für Ihren Brief vom 12. Mai. Ich schreibe Ihnen wegen meines Aufenthalts vom 3. bis 5. Mai.',
+      'Leider ist mein Zimmer sehr laut und schmutzig gewesen. Die Heizung in meinem Zimmer hat nicht funktioniert.',
+      'Ich bin mit dem Essen nicht zufrieden. Ich warte schon seit zwei Wochen auf eine Antwort von Ihnen.',
+      'Könnten Sie mir bitte einen Teil des Geldes zurückgeben? Bitte antworten Sie mir so schnell wie möglich.',
+      'Mit freundlichen Grüßen,\nMehmet Yılmaz',
+    ],
+    tr: [
+      'Saygıdeğer bayanlar ve baylar,',
+      '12 Mayıs tarihli mektubunuz için teşekkürler. Size 3-5 Mayıs konaklamam hakkında yazıyorum.',
+      'Maalesef odam çok gürültülü ve kirliydi. Odamdaki kalorifer çalışmadı.',
+      'Yemekten memnun değilim. İki haftadır cevabınızı bekliyorum.',
+      'Paranın bir kısmını iade edebilir misiniz lütfen? Lütfen en kısa sürede cevap verin.',
+      'Saygılarımla,\nMehmet Yılmaz',
+    ],
+    kalipNotu: 'B1 Beschwerde iskeleti: Tarih + Aufenthalt bilgisi → leider ile 2-3 sorun → istek (Könnten Sie ...) → kapanış. Geçmiş zaman için Präteritum/Perfekt karıştırma: hat funktioniert, ist gewesen.',
+  },
+  {
+    id: 't3',
+    level: 'B2',
+    titleTr: 'İş Başvurusu (Bewerbung)',
+    titleDe: 'Bewerbung als Verkäuferin',
+    thema: 'Resmi mektup · Bewerbung',
+    de: [
+      'Sehr geehrte Damen und Herren der Personalabteilung,',
+      'Mit großem Interesse habe ich Ihre Anzeige auf Ihrer Webseite gelesen. Ich möchte mich um die Stelle als Verkäuferin bewerben.',
+      'Ich bin seit drei Jahren Kundin bei Ihnen und habe gute Erfahrungen mit Ihrem Unternehmen gemacht. Einerseits arbeite ich gerne mit Menschen, andererseits bringe ich Erfahrung im Verkauf mit.',
+      'Ich wäre Ihnen sehr dankbar, wenn Sie mich zu einem Vorstellungsgespräch einladen könnten.',
+      'Für Rückfragen stehe ich Ihnen gerne zur Verfügung. Ich freue mich darauf, von Ihnen zu hören.',
+      'Mit freundlichen Grüßen,\nElif Yılmaz\nAnlagen: Lebenslauf, Zeugnisse',
+    ],
+    tr: [
+      'İnsan kaynakları departmanının saygıdeğer hanımefendileri ve beyefendileri,',
+      'Web sitenizdeki ilanınızı büyük ilgiyle okudum. Satış görevlisi pozisyonuna başvurmak istiyorum.',
+      'Üç yıldır müşterinizim ve şirketinizle ilgili iyi deneyimlerim oldu. Bir yandan insanlarla çalışmayı seviyorum, öte yandan satış deneyimim var.',
+      'Beni iş görüşmesine davet ederseniz çok minnettar olurum.',
+      'Sorularınız için memnuniyetle hazırım. Sizden haber almayı dört gözle bekliyorum.',
+      'Saygılarımla,\nElif Yılmaz\nEkler: Özgeçmiş, sertifikalar',
+    ],
+    kalipNotu: 'B2 Bewerbung altın kuralları: Anzeige referansı → sich bewerben um + Akk → Erfahrung + Stärken (einerseits/andererseits) → Konjunktiv II istek → Anlagen satırı. Asla "Ich will" yazma, "Ich möchte" kullan.',
+  },
+  {
+    id: 't4',
+    level: 'B2',
+    titleTr: 'Arızalı Ürün Şikayeti',
+    titleDe: 'Reklamation – defektes Gerät',
+    thema: 'Resmi mektup · Reklamation',
+    de: [
+      'Sehr geehrter Herr Schmidt,',
+      'Bezugnehmend auf unser Telefonat vom Montag, schreibe ich Ihnen heute. Anlass meines Schreibens ist die fehlerhafte Rechnung vom 5. Juni.',
+      'Zu meiner Enttäuschung musste ich feststellen, dass das Gerät defekt ist. Das entspricht nicht der Beschreibung auf Ihrer Webseite.',
+      'Trotz mehrmaliger Aufforderung wurde der Schaden bisher nicht behoben.',
+      'Ich fordere Sie auf, den Betrag innerhalb von 14 Tagen zurückzuerstatten. Wären Sie so freundlich, mir die Bestätigung per E-Mail zu senden?',
+      'Vielen Dank im Voraus für Ihre Bemühungen.',
+      'Mit freundlichen Grüßen,\nMehmet Yılmaz\nKundennummer: 45821',
+    ],
+    tr: [
+      'Saygıdeğer Bay Schmidt,',
+      'Pazartesi günkü telefon görüşmemize istinaden bugün yazıyorum. Yazımın nedeni 5 Haziran tarihli hatalı faturadır.',
+      'Hayal kırıklığıyla cihazın arızalı olduğunu tespit ettim. Bu, web sitenizdeki açıklamaya uymuyor.',
+      'Defalarca talep etmeme rağmen hasar hâlâ giderilmedi.',
+      'Tutarı 14 gün içinde iade etmenizi talep ediyorum. Onayı e-postayla gönderme inceliğinde bulunur musunuz?',
+      'Çabalarınız için şimdiden teşekkürler.',
+      'Saygılarımla,\nMehmet Yılmaz\nMüşteri No: 45821',
+    ],
+    kalipNotu: 'B2 Reklamation formülü: Bezugnehmend ... → feststellen/entsprechen ile sorun → Trotz ... Passiv ile vurgu → auffordern + Frist (14 Tage) → Kundennummer ekle. Sayı ve tarih vermek mektubu inandırıcı yapar.',
+  },
+  {
+    id: 't5',
+    level: 'C1',
+    titleTr: 'Resmi Karara İtiraz (Widerspruch)',
+    titleDe: 'Widerspruch gegen den Bescheid',
+    thema: 'Resmi dilekçe · Widerspruch',
+    de: [
+      'Sehr geehrte Damen und Herren,',
+      'Gegen den Bescheid vom 10. August, Aktenzeichen 2026/1847, lege ich fristgerecht Widerspruch ein.',
+      'Anlässlich Ihres Schreibens nehme ich wie folgt Stellung: Der Zweck dieses Schreibens besteht darin, auf einen Missstand aufmerksam zu machen.',
+      'Es lässt sich nicht leugnen, dass die Entscheidung auf unvollständigen Angaben beruht. In oben genannter Angelegenheit bitte ich um eine Überprüfung der Entscheidung.',
+      'Sollte keine zufriedenstellende Lösung gefunden werden, sehe ich mich gezwungen, weitere Schritte einzuleiten.',
+      'Für Ihr Entgegenkommen bedanke ich mich bereits im Voraus. In Erwartung Ihrer baldigen Antwort verbleibe ich mit freundlichen Grüßen.',
+      'Hochachtungsvoll\nDr. Elif Yılmaz',
+    ],
+    tr: [
+      'Saygıdeğer hanımefendiler, beyefendiler,',
+      '10 Ağustos tarihli, 2026/1847 dosya numaralı karara süresi içinde itiraz ediyorum.',
+      'Yazınız vesilesiyle görüşümü şöyle bildiriyorum: Bu yazının amacı bir aksaklığa dikkat çekmektir.',
+      'Kararın eksik bilgilere dayandığı inkâr edilemez. Yukarıda anılan konuda kararın gözden geçirilmesini rica ediyorum.',
+      'Tatmin edici çözüm bulunmazsa başka adımlar atmak zorunda kalacağım.',
+      'Anlayışınız için şimdiden teşekkür eder, yakın cevabınızı bekleyerek saygılarımla kalırım.',
+      'Saygılarımla\nDr. Elif Yılmaz',
+    ],
+    kalipNotu: 'C1 Widerspruch olmazsa olmazları: Aktenzeichen + fristgerecht → Stellung nehmen → Passiversatz (lässt sich ...) → Konsequenz (sehe mich gezwungen) → verbleibe-Formel. Nominale Ausdrucksweise (Stellung nehmen, in Betracht ziehen) C1 puanı getirir.',
+  },
+  {
+    id: 't6',
+    level: 'C1',
+    titleTr: 'Görüş Yazısı (Leserbrief / Stellungnahme)',
+    titleDe: 'Stellungnahme zum Nahverkehr',
+    thema: 'Görüş yazısı · Erörterung',
+    de: [
+      'Sehr geehrte Damen und Herren der Redaktion,',
+      'Es ist mir ein besonderes Anliegen, Ihnen zum Thema öffentlicher Nahverkehr zu schreiben. Nach reiflicher Überlegung habe ich mich entschlossen, meine Meinung darzulegen.',
+      'Aus meiner Sicht überwiegen die Vorteile bei Weitem die Nachteile. Einerseits spart ein gutes Netz Zeit und Geld, andererseits schützt es die Umwelt.',
+      'Ich plädiere dafür, den öffentlichen Nahverkehr stärker zu fördern. Mit Bedauern stelle ich fest, dass die Ticketpreise erheblich von einem fairen Niveau abweichen.',
+      'Zusammenfassend lässt sich sagen, dass diese Maßnahme dringend erforderlich ist.',
+      'Ich danke Ihnen für Ihre Aufmerksamkeit und verbleibe mit besten Grüßen.\nElif Yılmaz',
+    ],
+    tr: [
+      'Editörlüğün saygıdeğer hanımefendileri ve beyefendileri,',
+      'Size toplu taşıma konusunda yazmak benim için özel bir meseledir. Uzun düşünmelerden sonra görüşümü açıklamaya karar verdim.',
+      'Bana göre avantajlar dezavantajlara açık ara ağır basıyor. Bir yandan iyi bir ağ zaman ve para kazandırır, öte yandan çevreyi korur.',
+      'Toplu taşımayı güçlü şekilde desteklemekten yanayım. Üzülerek bilet fiyatlarının adil seviyeden önemli ölçüde saptığını tespit ediyorum.',
+      'Özetle bu önlemin acilen gerekli olduğu söylenebilir.',
+      'İlginiz için teşekkür eder, en iyi dileklerimle kalırım.\nElif Yılmaz',
+    ],
+    kalipNotu: 'C1 Erörterung iskeleti: Anliegen-Satz → Aus meiner Sicht ... überwiegen → einerseits/andererseits dengesi → plädieren dafür → Zusammenfassend lässt sich sagen. Her paragrafa bir Konnektor (zudem, ferner, hingegen, dennoch) serpiştir.',
+  },
+];
